@@ -29,6 +29,8 @@ sales_data = pd.DataFrame({
 
 # Initialize the Dash app
 app = dash.Dash(__name__)
+# Expose the server for Azure deployment
+server = app.server
 
 # Define the layout
 app.layout = html.Div([
@@ -138,9 +140,9 @@ def update_charts(selected_products, selected_regions):
     
     return time_series_fig, product_fig, region_fig, heatmap_fig
 
-# Expose the server for Azure deployment
-server = app.server
+
 
 # Run the app
 if __name__ == '__main__':
+
     app.run_server(debug=True, host='0.0.0.0', port=8000)
