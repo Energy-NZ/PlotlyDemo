@@ -1,4 +1,7 @@
-﻿dash==2.6.0
-pandas
+dash==2.14.1
+plotly>=5.15.0
+pandas>=2.0.0
+setuptools<81
 gunicorn
-setuptools
+
+
