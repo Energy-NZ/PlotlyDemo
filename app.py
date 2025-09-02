@@ -18,10 +18,11 @@ server = app.server  # for Render / Azure
 
 # Layout
 app.layout = html.Div(children=[
-    html.H1("Hello Dash!"),
+    html.H1("Energy NZ Dash"),
     dcc.Graph(id='example-graph', figure=fig)
 ])
 
 # Run locally
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    app.run(debug=True)
+
